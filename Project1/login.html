@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ру">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вход — Авоська</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand"><div class="logo"></div><div>Авоська</div></div>
+        <ul>
+          <li><a href="./index.html">Каталог</a></li>
+          <li><a href="./orders.html">Мои заказы</a></li>
+          <li><a href="./admin.html" data-auth-admin style="display:none">Админ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn secondary" href="./register.html">Регистрация</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Вход</h1>
+      <div class="panel" style="max-width:560px">
+        <form data-form="login" action="#" method="post" novalidate>
+          <div class="field">
+            <label>Логин</label>
+            <input name="login" data-validate="login" required />
+            <div class="hint">Введите ваш логин.</div>
+            <div class="error" style="display:none">Неверный логин.</div>
+          </div>
+          <div class="field">
+            <label>Пароль</label>
+            <input type="password" name="password" data-validate="password" required />
+            <div class="hint">Минимум 4 символа.</div>
+            <div class="error" style="display:none">Пароль слишком короткий.</div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="btn" type="submit">Войти</button>
+          </div>
+          <p class="hint">Доступ в админ-панель: логин <b>sklad</b>, пароль <b>123qwe</b>. Кнопка «Админ» появится после входа.</p>
+        </form>
+      </div>
+    </main>
+    <footer class="container">© 2024–2025 «Авоська»</footer>
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+

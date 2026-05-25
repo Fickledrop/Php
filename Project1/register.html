@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Регистрация — Авоська</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand"><div>Авоська</div></div>
+        <ul>
+          <li><a href="./index.html">Каталог</a></li>
+          <li><a href="./orders.html">Мои заказы</a></li>
+          <li><a href="./admin.html" data-auth-admin style="display:none">Админ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn ghost" href="./login.html">Войти</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Регистрация</h1>
+      <div class="panel" style="max-width:720px">
+        <form data-form="register" action="#" method="post" novalidate>
+          <div class="field">
+            <label>Логин (уникальный)</label>
+            <input name="login" data-validate="login" placeholder="min 3 символа" required />
+            <div class="hint">Используйте латиницу/цифры, минимум 3 символа.</div>
+            <div class="error" style="display:none">Введите корректный логин.</div>
+          </div>
+          <div class="field">
+            <label>Пароль</label>
+            <input type="password" name="password" data-validate="password" placeholder="мин. 4 символа" required />
+            <div class="hint">Минимум 4 символа.</div>
+            <div class="error" style="display:none">Пароль слишком короткий.</div>
+          </div>
+          <div class="field">
+            <label>ФИО</label>
+            <input name="fio" data-validate="fio" placeholder="Только кириллица и пробелы" required />
+            <div class="hint">Пример: Иванов Иван Иванович</div>
+            <div class="error" style="display:none">Разрешены кириллица и пробелы.</div>
+          </div>
+          <div class="field">
+            <label>Телефон</label>
+            <input name="phone" data-validate="phone" placeholder="+7(XXX)-XXX-XX-XX или 11 цифр" required />
+            <div class="hint">Можно ввести 11 цифр без символов: 79991234567</div>
+            <div class="error" style="display:none">Неверный формат телефона.</div>
+          </div>
+          <div class="field">
+            <label>Email (уникальный)</label>
+            <input type="email" name="email" data-validate="email" placeholder="name@example.com" required />
+            <div class="hint">Укажите действующий адрес эл. почты.</div>
+            <div class="error" style="display:none">Неверный формат email.</div>
+          </div>
+          <div style="display:flex; gap:10px">
+            <button class="btn" type="submit">Зарегистрироваться</button>
+            <a class="btn secondary" href="./login.html">У меня уже есть аккаунт</a>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="container">© 2024–2025 «Авоська»</footer>
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+

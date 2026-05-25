@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Авоська — Каталог</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <div>Авоська</div>
+        </div>
+        <ul>
+          <li><a href="./index.html">Каталог</a></li>
+          <li><a href="./orders.html">Мои заказы</a></li>
+          <li><a href="./admin.html" data-auth-admin style="display:none">Админ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn ghost" href="./login.html">Войти</a>
+          <a class="btn secondary" href="./register.html">Регистрация</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Заказывайте продукты со склада — быстро и удобно</h1>
+          <p>Свежие товары по выгодным ценам. Выберите и оформите доставку на удобный адрес.</p>
+          <div>
+            <a class="btn" href="./order.html">Оформить заказ</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="mosaic">
+            <div class="card-img"><img src="./img/products.jpg" alt="Каталог товаров"/></div>
+            <div class="card-img"><img src="./img/products2.png" alt="Популярные"/></div>
+            <div class="card-img"><img src="./img/apple.jpg" alt="Яблоки"/></div>
+            <div class="card-img"><img src="./img/bread.jpg" alt="Хлеб"/></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Популярные товары</h2>
+        <div class="grid-products">
+          <article class="product-card fade-in">
+            <div class="media"><img src="./img/apple.jpg" alt="Яблоки"/></div>
+            <div class="body">
+              <div class="title">Яблоки красные</div>
+              <div class="meta">Сочные и сладкие</div>
+              <a class="btn secondary" href="./order.html">Заказать</a>
+            </div>
+          </article>
+          <article class="product-card fade-in" style="animation-delay:.06s">
+            <div class="media"><img src="./img/bread.jpg" alt="Хлеб"/></div>
+            <div class="body">
+              <div class="title">Хлеб пшеничный</div>
+              <div class="meta">Свежая выпечка</div>
+              <a class="btn secondary" href="./order.html">Заказать</a>
+            </div>
+          </article>
+          <article class="product-card fade-in" style="animation-delay:.12s">
+            <div class="media"><img src="./img/products.jpg" alt="Набор продуктов"/></div>
+            <div class="body">
+              <div class="title">Набор продуктов</div>
+              <div class="meta">Всё необходимое</div>
+              <a class="btn secondary" href="./order.html">Заказать</a>
+            </div>
+          </article>
+          <article class="product-card fade-in" style="animation-delay:.18s">
+            <div class="media"><img src="./img/products2.png" alt="Набор продуктов 2"/></div>
+            <div class="body">
+              <div class="title">Набор продуктов 2</div>
+              <div class="meta">Бюджетный вариант</div>
+              <a class="btn secondary" href="./order.html">Заказать</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
+      © 2024–2025 «Авоська»
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+

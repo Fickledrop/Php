@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Мобильный прототип — Авоська</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      body { max-width: 480px; margin: 0 auto; height: 100vh; }
+      #mobile-prototype { height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
+    </style>
+  </head>
+  <body id="mobile-prototype">
+    <header class="site-header">
+      <div class="container" style="width:100%; padding:10px 12px">
+        <div class="brand"><div>Авоська</div></div>
+      </div>
+    </header>
+
+    <main class="screens">
+      <section id="screen-catalog" class="screen">
+        <div class="mobile-header">
+          <h3 style="margin:0">Каталог</h3>
+        </div>
+        <div style="padding:12px">
+          <div class="product-card" style="margin-bottom:12px">
+            <div class="media"><img src="./img/apple.jpg" alt="Яблоки"/></div>
+            <div class="body">
+              <div class="title">Яблоки красные</div>
+              <button class="btn secondary" data-goto="screen-order">Заказать</button>
+            </div>
+          </div>
+          <div class="product-card" style="margin-bottom:12px">
+            <div class="media"><img src="./img/bread.jpg" alt="Хлеб"/></div>
+            <div class="body">
+              <div class="title">Хлеб пшеничный</div>
+              <button class="btn secondary" data-goto="screen-order">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="screen-order" class="screen">
+        <div class="mobile-header">
+          <button class="back" data-goto="screen-catalog">← Назад</button>
+          <h3 style="margin:0">Оформление заказа</h3>
+        </div>
+        <div style="padding:12px">
+          <form data-form="order" action="#" novalidate>
+            <div class="field">
+              <label>Товар</label>
+              <select required>
+                <option>Яблоки красные</option>
+                <option>Хлеб пшеничный</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Количество</label>
+              <input type="number" min="1" step="1" data-validate="qty" placeholder="1" required />
+              <div class="hint">Только целые числа больше 0.</div>
+              <div class="error" style="display:none">Укажите корректное количество.</div>
+            </div>
+            <div class="field">
+              <label>Адрес</label>
+              <textarea rows="3" placeholder="Город, улица, дом" required></textarea>
+            </div>
+            <button type="button" class="btn" data-goto="screen-success">Отправить</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="screen-success" class="screen">
+        <div class="mobile-header">
+          <h3 style="margin:0">Заказ отправлен</h3>
+        </div>
+        <div style="padding:12px; text-align:center">
+          <p>Спасибо! Ваш заказ создан.</p>
+          <button class="btn" data-goto="screen-catalog">На главную</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container" style="width:100%; padding:10px 12px">© 2024–2025</footer>
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+

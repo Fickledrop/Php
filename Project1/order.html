@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Новый заказ — Авоська</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand"><div>Авоська</div></div>
+        <ul>
+          <li><a href="./index.html">Каталог</a></li>
+          <li><a href="./orders.html">Мои заказы</a></li>
+          <li><a href="./admin.html" data-auth-admin style="display:none">Админ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn ghost" href="./login.html">Войти</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Оформление заказа</h1>
+      <div class="panel" style="max-width:800px">
+        <form data-form="order" action="#" method="post" novalidate>
+          <div class="field">
+            <label>Товар</label>
+            <select name="product" required>
+              <option value="">Выберите товар</option>
+              <option>Яблоки красные</option>
+              <option>Хлеб пшеничный</option>
+              <option>Набор продуктов</option>
+              <option>Набор продуктов 2</option>
+            </select>
+            <div class="hint">Выберите позицию из каталога.</div>
+            <div class="error" style="display:none">Укажите товар.</div>
+          </div>
+
+          <div class="field">
+            <label>Количество</label>
+            <input type="number" name="qty" min="1" step="1" data-validate="qty" placeholder="1" required />
+            <div class="hint">Только целые числа больше 0.</div>
+            <div class="error" style="display:none">Укажите корректное количество.</div>
+          </div>
+
+          <div class="field">
+            <label>Адрес доставки</label>
+            <textarea name="address" rows="3" placeholder="Город, улица, дом, квартира" required></textarea>
+            <div class="hint">Укажите полный адрес для курьера.</div>
+            <div class="error" style="display:none">Адрес обязателен.</div>
+          </div>
+
+          <div style="display:flex; gap:10px">
+            <button class="btn" type="submit">Отправить заказ</button>
+            <a class="btn secondary" href="./orders.html">Мои заказы</a>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="container">© 2024–2025 «Авоська»</footer>
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Мои заказы — Авоська</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand"><div>Авоська</div></div>
+        <ul>
+          <li><a href="./index.html">Каталог</a></li>
+          <li><a href="./order.html">Новый заказ</a></li>
+          <li><a href="./admin.html" data-auth-admin style="display:none">Админ</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn ghost" href="./login.html">Войти</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Мои заказы</h1>
+      <div class="panel">
+        <div class="toolbar">
+          <input type="search" id="orders-search" placeholder="Поиск по названию товара" />
+          <select id="orders-status">
+            <option value="">Все статусы</option>
+            <option value="новое">новое</option>
+            <option value="подтверждено">подтверждено</option>
+            <option value="отменено">отменено</option>
+          </select>
+          <button class="btn secondary" id="logout-btn" title="Выйти из аккаунта">Выйти</button>
+        </div>
+      </div>
+      <div class="panel table-wrap">
+        <table class="table" id="orders-table">
+          <thead>
+            <tr>
+              <th>Товар</th>
+              <th>Кол-во</th>
+              <th>Статус</th>
+              <th>Адрес</th>
+            </tr>
+          </thead>
+          <tbody id="orders-body"></tbody>
+        </table>
+      </div>
+    </main>
+    <footer class="container">© 2024–2025 «Авоська»</footer>
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+
